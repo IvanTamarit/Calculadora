@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Agregar la etiqueta viewport -->
+    <title>Calculadora de Cambio</title>
+    <link id="theme" rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora de Cambio</h1>
+    <form id="cambio-form">
+        <label for="precio_producto">Precio del Producto:</label>
+        <input type="number" id="precio_producto" required step="0.01"><br><br>
+        
+        <label for="cantidad_pagada">Cantidad Pagada:</label>
+        <input type="number" id="cantidad_pagada" required step="0.01"><br><br>
+        
+        <input type="submit" value="Calcular Cambio">
+    </form>
+    
+    <div id="resultado" class="hidden">
+        <h2>Resultado</h2>
+        <p>Cambio a devolver: <span id="cambio"></span> €</p>
+    </div>
+
+    <button id="reset-btn">Reiniciar</button> <!-- Botón de reinicio -->
+    <div id="theme-switcher">
+        <label for="theme-selector">Selecciona un tema:</label>
+        <select id="theme-selector">
+            <option value="styles.css">Tema Predeterminado</option>
+            <option value="dark-theme.css">Tema Oscuro</option>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
